@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Servicios | Blanqueamiento</title>
+
+<!-- Slider Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h1>Especialidades</h1>
+          <p>En Linda Sonrisa tenemos las mejores tecnologías para tu sonrisa.</p>
+          <p>Líderes de especialistas dentales de Chile.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Blanqueamiento</h2>
+          </div>
+          <p>Es un procedimiento que tiende a mejorar la apariencia del diente,
+            otorgando luminosidad y permite subir algunos puntos en la escala del blanco.
+            Previo a eso, es necesario realizar una profilaxis profunda (limpieza). </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{% static 'core/img/portfolio/work11.jpeg' %}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>Solicita Tu Hora</h2>
+          {% comment %} <p>Read more about what we do and our philosophy of design. Judge for yourself The work and
+            results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+          {% endcomment %}
+          <a class="btn btn-default btn-call-to-action" href="{% url 'reserva' %}">Reservar Hora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

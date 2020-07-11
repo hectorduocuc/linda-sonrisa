@@ -1,0 +1,273 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Registrar</title>
+
+<!--CSS-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+
+<!--Formulario Registro-->
+
+{% comment %} <h2>Registro de usuario</h2>
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+  <table>
+    {{ form.as_table }}
+  </table>
+
+  <input type="reset" value="Limpiar">
+  <input type="submit" value="Registrar">
+
+</form>
+{% endcomment %}
+
+<!----------------------->
+
+<!-- Slider Start -->
+
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>NUEVO REGISTRO</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-form">
+  <div class="block">
+    <div class="container">
+      <div id="booking" class="section">
+        <div class="section-center">
+          <div class="container">
+            <div class="row">
+              <div class="booking-form">
+
+                <br>
+                <br>
+
+                <form method="POST">
+                  {% csrf_token %}
+
+                  <h4><label>MIS DATOS PERSONALES</label></h4>
+                  <br>
+                  <br>
+
+                  <div class="container">
+                    <div class="row">
+
+                      {% comment %} <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>RUN</label>
+                          <input class="form-control" type="text" placeholder="Ingrese su Rut">
+                        </div>
+                      </div> {% endcomment %}
+
+                      <br>
+                      <br>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Nombre</label>
+                          <input class="form-control" type="text" name="first_name" placeholder="Ingresar Nombre"
+                            required>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Apellidos</label>
+                          <input class="form-control" type="text" name="last_name" placeholder="Ingrese apellidos"
+                            required>
+                        </div>
+                      </div>
+
+                      {% comment %} <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Apellido Materno</label>
+                          <input class="form-control" type="text" placeholder="Ingrese apellido materno">
+                        </div>
+                      </div> {% endcomment %}
+
+                      <br>
+                      <br>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Correo Electrónico</label>
+                          <input class="form-control" type="email" name="email" placeholder="Ingrese su correo"
+                            required>
+                        </div>
+                      </div>
+
+                      {% comment %} <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Telefóno</label>
+                          <input class="form-control" type="tel" placeholder="Ingrese su teléfono">
+                        </div>
+                      </div> {% endcomment %}
+
+                      {% comment %} <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Fecha Nacimiento</label>
+                          <input class="form-control" type="date" required>
+                          <h6>**Nos contactaremos para su confirmación.</h6>
+                        </div>
+                      </div> {% endcomment %}
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Nombre de usuario</label>
+                          <input class="form-control" type="text" name="username"
+                            placeholder="Ingresar Nombre de usuario" required>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>*Contraseña</label>
+                          <input class="form-control" type="password" name="password1" placeholder="Ingresar contraseña"
+                            required>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>*Confirmar Contraseña</label>
+                          <input class="form-control" type="password" name="password2"
+                            placeholder="Ingresar nuevamente contraseña" required>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {% comment %} <br>
+                  <br>
+                  <h4><label>MI DIRECCIÓN PERSONAL</label></h4>
+                  <br>
+                  <br>
+
+                  <div class="container">
+                    <div class="row">
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Región</label>
+                          <input class="form-control" type="text" name="region" placeholder="Ingrese región">
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Comuna</label>
+                          <input class="form-control" type="text" placeholder="Ingrese comuna">
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 ">
+                        <div class="form-group">
+                          <label>Dirección</label>
+                          <input class="form-control" type="text" placeholder="Ingrese dirección">
+                        </div>
+                      </div> {% endcomment %}
+
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                          <button class="btn btn-default" type="submit" value="Registrar">Registrar</button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                          <button class="btn btn-default" type="reset" value="Limpiar">Limpiar</button>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+
+          <ul class="address-block">
+            <li>
+              <i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+            </li>
+            <li>
+              <i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+              hrs
+            </li>
+            <li>
+              <i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i class="fa fa-cc-amex"></i><i
+                class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+              Crédito - Débito - Paypal
+            </li>
+
+          </ul>
+          <ul class="social-icons">
+            <li>
+              <a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Servicios | Prevención</title>
+
+<!-- Slider Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h1>Especialidades</h1>
+          <p>En Linda Sonrisa tenemos las mejores tecnologías para tu sonrisa.</p>
+          <p>Líderes de especialistas dentales de Chile.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Prevención</h2>
+          </div>
+          <p>Es una serie de procedimientos, tanto educativos como clínicos, que enseñan buenos hábitos de higiene,
+            masticación y deglución, con miras a prevenir la aparición de caries y enfermedades periodontales y de las
+            encías. Al mismo tiempo corrigen los malos hábitos y promueve una alimentación sana. </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{% static 'core/img/portfolio/work4.jpg' %}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>Solicita Tu Hora</h2>
+          {% comment %} <p>Read more about what we do and our philosophy of design. Judge for yourself The work and
+            results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+          {% endcomment %}
+          <a class="btn btn-default btn-call-to-action" href="{% url 'reserva' %}">Reservar Hora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

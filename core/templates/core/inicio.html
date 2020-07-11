@@ -1,0 +1,300 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Inicio</title>
+
+<!-- Slider Start -->
+
+<section id="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="block">
+          <h1 class="animated fadeInUp">CLINICA ODONTOLOGICA <br> LINDA SONRISA</h1>
+          <p class="animated fadeInUp">Que la sonrisa perfecta no sea solo un sueño, <br> nosotros te ayudamos a
+            convertirlo en realidad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wrapper Start -->
+
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Sobre Nosotros</h2>
+            <p>Trabajamos para el maravilloso cometido de hacerte feliz a través de tu sonrisa.</p>
+          </div>
+          <p>Clínica dental Linda Sonrisa, nace como un proyecto universitario, en una ubicación central y de fácil
+            acceso para los pacientes; poseemos un enfoque multidisciplinarios, prinicpalmente en la salud y estética.
+            Creemos en una atención integral a un precio razonable, siendo nuestra prioridad la comodidad del paciente.
+            Nos enfocamos en una atención preventiva que implica la detección precoz de las distintas enfermedades que
+            afectan a nuestros pacientes, evitando así tratamientos más complejos e invasivos. Además ofrecemos
+            rehabilitaciones complejas para pacientes que ya hayan sufrido perdida de sus dientes, para poder devolver
+            la estética y funcionalidad con estos tratamientos. </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{% static 'core/img/wrapper-img.png' %}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+<section id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-6">
+        <h2>¿Qué es la Odontología?</h2>
+        <p>La odontología es la ciencia que se encarga del diagnóstico, tratamiento y prevención de enfermedades orales
+          como las caries dentales, problemas periodontales (inflamación de encías y pérdida de hueso), quistes y
+          lesiones de maxilares, lesiones de paladar, lengua y mejillas y dolor a la articulación de la mandíbula.</p>
+        <p>El Servicio Dental de <strong>Linda Sonrisa</strong> cuenta con todas las especialidades y tratamientos
+          odontológicos necesarios para atender a nuestros pacientes, contamos equipamiento de primera, instalaciones
+          cómodas y de fácil acceso.</p>
+        <h2>Beneficios Dental Linda Sonrisa</h2>
+        <p>• Box dentales equipados con la mejor tecnología.</p>
+        <p>• Especialistas de primera.</p>
+        <p>• Consultas iniciales para diagnóstico y evaluación de adultos y niños.</p>
+        <a href="{% url 'servicios' %}" class="btn btn-view-works">Nuestros Servicios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Start -->
+
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2>Nuestros Servicios</h2>
+        <p>Contamos con un completo equipo de médicos y especialidades.</p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="icon ion-coffee"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-01.png' %}" alt="Icon01">
+          <h4>Diagnósitco Radiográfico</h4>
+          <p>Dentales y Maxilofaciales </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-compass"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-02.png' %}" alt="Icon02">
+          <h4>Periodoncia</h4>
+          <p>Salud de las Encías </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-image"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-03.png' %}" alt="Icon03">
+          <h4>Prevensión</h4>
+          <p>Higiene Bucal </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-bug"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-04.png' %}" alt="Icon04">
+          <h4>Ortodoncia</h4>
+          <p>Frenillos </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-headphone"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-05.png' %}" alt="Icon05">
+          <h4>Odontopediatría</h4>
+          <p>Salud Dental de los Niños </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-leaf"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-06.png' %}" alt="Icon06">
+          <h4>Odontología Restauradora</h4>
+          <p>Tapaduras </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-planet"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-07.png' %}" alt="Icon07">
+          <h4>Estética Facial</h4>
+          <p>Rejuvenecimiento Facial </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-earth"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-08.png' %}" alt="Icon08">
+          <h4>Endodoncia</h4>
+          <p>Tratamiento Conducto </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          {% comment %} <i class="ion-earth"></i> {% endcomment %}
+          <img src="{% static 'core/img/icon-09.png' %}" alt="Icon09">
+          <h4>Blanqueamiento</h4>
+          <p>Dientes más Blancos </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to action Start -->
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          {% comment %} <h2>Stop By For A visit</h2> {% endcomment %}
+          <ul class="address-block">
+            <li>
+              <i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+            </li>
+            <li>
+              <i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+              hrs
+            </li>
+            <li>
+              <i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i class="fa fa-cc-amex"></i><i
+                class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+              Crédito - Débito - Paypal
+            </li>
+          </ul>
+          <ul class="social-icons">
+            <li>
+              <a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content Start -->
+
+<section id="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h2>Linda Sonrisa en números</h2>
+        <p>¿Por qué elegirnos?</p>
+        <p>Soluciones para que siempre tengas más y mejor salud.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="block">
+          <ul class="counter-box clearfix">
+            <li>
+              <div class="block">
+                <i class="ion-ios-chatboxes-outline"></i>
+                <h4 class="counter">100</h4>
+                <span>Pacientes al Mes</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-glasses-outline"></i>
+                <h4 class="counter">2</h4>
+                <span>Especialistas a su disposición</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-compose-outline"></i>
+                <h4 class="counter">5</h4>
+                <span>Años de preparación</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-timer-outline"></i>
+                <h4 class="counter">100</h4>
+                <span>Clientes satisfechos</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            <div>
+              <img src="{% static 'core/img/cotation.png' %}" alt="IMG">
+              <p>"Cirujano dentista endodoncista diplomado en endodoncias clínicas, Universidad de Católica."</p>
+              <div class="user">
+                <img src="{% static 'core/img/item-img1.png' %}" alt="Pepole">
+                <p><span>Luis</span> Odontólogo</p>
+              </div>
+            </div>
+            <div>
+              <img src="{% static 'core/img/cotation.png' %}" alt="IMG">
+              <p>"Cirujano dentista armonización orofacial rejuvenecimiento y estética, Universidad de Católica"</p>
+              <div class="user">
+                <img src="{% static 'core/img/item-img2.jpg' %}" alt="Pepole">
+                <p><span>Marco</span> Odontólogo</p>
+              </div>
+            </div>
+            {% comment %} <div>
+              <img src="{% static 'core/img/cotation.png' %}" alt="IMG">
+              <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative
+                ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+              <div class="user">
+                <img src="{% static 'core/img/item-img1.jpg' %}" alt="Pepole">
+                <p><span>Rose Ray</span> CEO</p>
+              </div>
+            </div> {% endcomment %}
+            {% comment %} <div>
+              <img src="{% static 'core/img/cotation.png' %}" alt="IMG">
+              <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative
+                ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+              <div class="user">
+                <img src="{% static 'core/img/item-img1.jpg' %}" alt="Pepole">
+                <p><span>Rose Ray</span> CEO</p>
+              </div>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

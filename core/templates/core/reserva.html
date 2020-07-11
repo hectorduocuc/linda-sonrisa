@@ -1,0 +1,218 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Agenda Tu Hora</title>
+
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" />
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+
+<!-- Slider Start -->
+
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>AGENDA UNA HORA</h2>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact-form">
+	<div class="block">
+		<div class="container">
+			<div id="booking" class="section">
+				<div class="section-center">
+					<div class="container">
+						<div class="row">
+							<div class="booking-form">
+								<div class="form-header">
+									{% comment %} <h1>AGENDA UNA HORA</h1> {% endcomment %}
+								</div>
+								<br>
+								<br>
+								<form action="" id="FormularioReserva" method="POST">
+									{%csrf_token %}
+									<div class="container">
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Nombre</span>
+													<input class="form-control" type="text"
+														placeholder="Ingrese su nombre" id="txtnombre" name="txtnombre"
+														required>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Apellido</span>
+													<input class="form-control" type="text"
+														placeholder="Ingrese su apellido" id="txtapellido"
+														name="txtapellido" required>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="form-label">Correo</span>
+											<input class="form-control" type="email" placeholder="Ingrese su correo"
+												id="txtcorreo" name="txtcorreo" required>
+										</div>
+
+										<div class="form-group">
+											<span class="form-label">Especialidad</span>
+											<div class="form-group">
+												<select class="form-control" id="cbxEspecialidad"
+													name="cbxEspecialidad">
+													<option>Seleccione una especialidad</option>
+													<option>Diagnósitco Radiográfico</option>
+													<option>Perodoncia</option>
+													<option>Implante Dental</option>
+													<option>Prevención</option>
+													<option>Ortodoncia</option>
+													<option>Odontopediatría</option>
+													<option>Odontología Restauradora</option>
+													<option>Estética Facial</option>
+													<option>Endodoncia</option>
+													<option>Blanqueamiento</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-sm-5">
+												<div class="form-group">
+													<span class="form-label">Fecha de Atención</span>
+													<input class="form-control" type="date" id="fecAtencion"
+														name="fecAtencion" required>
+													<h6>**Nos contactaremos para su confirmación.</h6>
+												</div>
+											</div>
+
+											<div class="col-sm-7">
+												<div class="row">
+													<div class="col-sm-4">
+														<div class="form-group">
+															<span class="form-label">Hora</span>
+															<select class="form-control" id="cbxHora" name="cbxHora">
+																<option>Seleccione un hora</option>
+																<option>09:00 AM</option>
+																<option>10:00 AM</option>
+																<option>11:00 AM</option>
+																<option>12:00 AM</option>
+																<option>15:00 PM</option>
+																<option>16:00 PM</option>
+																<option>17:00 PM</option>
+																<option>18.00 PM</option>
+															</select>
+															<span class="select-arrow"></span>
+														</div>
+													</div>
+
+													<div class="col-sm-4">
+														<div class="form-group">
+															<span class="form-label">Médico</span>
+															<select class="form-control" id="cbxmedico"
+																name="cbxmedico">
+																<option>Seleccione un Médico</option>
+																<option>Odontólogo Marco</option>
+																<option>Odontólogo Luis</option>
+															</select>
+															<span class="select-arrow"></span>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<br>
+										<br>
+										<div class="form-btn">
+											{% comment %} <button class="submit-btn">Book Now</button>
+											<a class="btn btn-default btn-call-to-action" href="#">Tell Us Your
+												Story</a>
+											{% endcomment %}
+											<button class="btn btn-default" type="submit">Solicitar Hora</button>
+										</div>
+									</div>
+								</form>
+								<h3>
+									{{mensaje}}
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					{% comment %} <h2>Stop By For A visit</h2> {% endcomment %}
+					<ul class="address-block">
+						<li>
+							<i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+						</li>
+						<li>
+							<i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+						</li>
+						<li>
+							<i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+						</li>
+						<li>
+							<i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+							hrs
+						</li>
+						<li>
+							<i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i
+								class="fa fa-cc-amex"></i><i class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+							Crédito - Débito - Paypal
+						</li>
+
+					</ul>
+					<ul class="social-icons">
+						<li>
+							<a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock contenido %}

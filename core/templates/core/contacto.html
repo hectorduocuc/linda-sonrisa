@@ -1,0 +1,148 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Contacto</title>
+
+<!-- Slider Start -->
+
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>CONTÁCTANOS</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- contact form start -->
+
+<section id="contact-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Correo">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Asunto">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <form>
+            <div class="form-group-2">
+              <textarea class="form-control" rows="3" placeholder="Mensaje"></textarea>
+            </div>
+            <button class="btn btn-default" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="contact-box" class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <h2>Visitanos o contáctanos</h2>
+          <ul class="address-block">
+            <li>
+              <i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+            </li>
+          </ul>
+          <ul class="social-icons-2">
+              <li>
+              <a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <h2>Encuentranos con Google Maps</h2>
+          <div class="google-map">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					{% comment %} <h2>Stop By For A visit</h2> {% endcomment %}
+					<ul class="address-block">
+						<li>
+							<i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+						</li>
+						<li>
+							<i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+						</li>
+						<li>
+							<i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+						</li>
+						<li>
+							<i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+							hrs
+						</li>
+						<li>
+							<i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i
+								class="fa fa-cc-amex"></i><i class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+							Crédito - Débito - Paypal
+						</li>
+
+					</ul>
+					<ul class="social-icons">
+						  <li>
+              <a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock contenido %}

@@ -1,0 +1,153 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Login</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/main.css' %}">
+
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<div class="login100-form-title" style="background-image: url({% static 'core/img/bg-01.jpg' %});">
+				<span class="login100-form-title-1">
+					Iniciar Sesión
+				</span>
+			</div>
+			{% comment %} <div class="login100-form"> {% endcomment %}
+				<form class="login100-form validate-form" method="POST">
+					{% csrf_token %}
+					{% comment %} <form class="login100-form validate-form"> {% endcomment %}
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Se requiere nombre usuario">
+							<span class="label-input100">Nombre Usuario</span>
+							<input class="input100" type="text" id="id_username" name="username"
+								placeholder="*Ingrese usuario" required>
+							<span class="focus-input100"></span>
+						</div>
+
+						{% comment %} <div class="wrap-input100 validate-input m-b-26"
+							data-validate="Se requiere correo electrónico">
+							<span class="label-input100">Correo Electrónico</span>
+							<input class="input100" type="text" name="username"
+								placeholder="Ingrese su correo electrónico">
+							<span class="focus-input100"></span>
+						</div> {% endcomment %}
+
+						<div class="wrap-input100 validate-input m-b-18" data-validate="Se requiere contraseña">
+							<span class="label-input100">Contraseña</span>
+							<input class="input100" type="password" id="id_username" name="password"
+								placeholder="*Ingrese contraseña" required>
+							<span class="focus-input100"></span>
+						</div>
+
+						<div class="flex-sb-m w-full p-b-30">
+							<div class="contact100-form-checkbox">
+								<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+								<label class="label-checkbox100" for="ckb1">
+									Recordar
+								</label>
+							</div>
+
+							{% comment %} <div>
+								<a href="#" class="txt1">
+									¿Olvidó su Contraseña?
+								</a>
+							</div> {% endcomment %}
+
+						</div>
+
+						<small class="text-danger">
+							{% if form.errors %}
+							{% for field in form %}
+							{% if field.errors %}
+							{% for error in field.errors %}
+							{{ error|escape }}
+							{%  endfor%}
+							{% endif %}
+							{% endfor %}
+
+							{% if form.non_field_errors %}
+							{% for error in form.non_field_errors %}
+							{{ error|escape }}
+							{%  endfor%}
+							{% endif %}
+							{% endif %}
+						</small>
+
+						<br>
+						<br>
+						<div class="container-login100-form-btn">
+							<button type="submit" class="login100-form-btn">
+								Iniciar Sesión
+							</button>
+
+						</div>
+
+						<div>
+
+							<a href="{% url 'registrar' %}" class="txt2">
+								¿No tiene cuenta? Registrarse
+							</a>
+						</div>
+
+					</form>
+					{% comment %} </div> {% endcomment %}
+		</div>
+	</div>
+</div>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					{% comment %} <h2>Stop By For A visit</h2> {% endcomment %}
+					<ul class="address-block">
+						<li>
+							<i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+						</li>
+						<li>
+							<i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+						</li>
+						<li>
+							<i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+						</li>
+						<li>
+							<i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+							hrs
+						</li>
+						<li>
+							<i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i
+								class="fa fa-cc-amex"></i><i class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+							Crédito - Débito - Paypal
+						</li>
+
+					</ul>
+					<ul class="social-icons">
+						<li>
+							<a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock contenido %}

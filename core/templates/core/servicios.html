@@ -1,0 +1,267 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Servicios</title>
+
+<!-- Slider Start -->
+
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>NUESTROS SERVICIOS</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Portfolio Start -->
+<section id="portfolio-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+              <li class="filter" data-filter="all">Nuestros Servicios</li>
+              <li class="filter" data-filter=".Diagnostico">Diagnósitco Radiográfico</li>
+              <li class="filter" data-filter=".Perodoncia">Perodoncia</li>
+              <li class="filter" data-filter=".Implante">Implante Dental</li>
+              <li class="filter" data-filter=".Prevencion">Prevención</li>
+              <li class="filter" data-filter=".Ortodoncia">Ortodoncia</li>
+              <li class="filter" data-filter=".Odontopediatria">Odontopediatría</li>
+              <li class="filter" data-filter=".Restauradora">Odontología Restauradora</li>
+              <li class="filter" data-filter=".Estetica">Estética Facial</li>
+              <li class="filter" data-filter=".Endodoncia">Endodoncia</li>
+              <li class="filter" data-filter=".Blanqueamiento">Blanqueamiento</li>
+            </ul>
+          </div>
+          <div class="portfolio-contant">
+            <ul id="portfolio-contant-active">
+              <li class="mix Diagnostico">
+                <a href="{% url 'diagnostico' %}">
+                  <img src="{% static 'core/img/portfolio/work1.png' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Diagnóstico Radiográfico</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Perodoncia">
+                <a href="{% url 'perodoncia' %}">
+                  <img src="{% static 'core/img/portfolio/work2.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Perodoncia</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Implante">
+                <a href="{% url 'implante' %}">
+                  <img src="{% static 'core/img/portfolio/work3.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Implante dental</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Prevencion">
+                <a href="{% url 'prevencion' %}">
+                  <img src="{% static 'core/img/portfolio/work4.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Prevención</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Odontopediatria">
+                <a href="{% url 'odontopediatria' %}">
+                  <img src="{% static 'core/img/portfolio/work5.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Odontopediatría</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Implante">
+                <a href="{% url 'implante' %}">
+                  <img src="{% static 'core/img/portfolio/work6.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Implante dental</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Ortodoncia">
+                <a href="{% url 'ortodoncia' %}">
+                  <img src="{% static 'core/img/portfolio/work7.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Ortodoncia</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Restauradora">
+                <a href="{% url 'restauradora' %}">
+                  <img src="{% static 'core/img/portfolio/work8.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Odontología Restauradora</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Estetica">
+                <a href="{% url 'estetica' %}">
+                  <img src="{% static 'core/img/portfolio/work9.jpeg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Estética Facial</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Endodoncia">
+                <a href="{% url 'endodoncia' %}">
+                  <img src="{% static 'core/img/portfolio/work10.jpg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Endodoncia</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Blanqueamiento">
+                <a href="{% url 'blanqueamiento' %}">
+                  <img src="{% static 'core/img/portfolio/work11.jpeg' %}" alt="">
+                  <div class="overly">
+                    <div class="position-center">
+                      <h2>Blanqueamiento</h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients Logo Section Start -->
+{% comment %} <section id="clients-logo-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div id="clients-logo" class="owl-carousel">
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo1.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo2.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo3.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo4.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo5.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo3.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo2.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo5.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo1.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo4.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo5.png" alt="Features">
+            </div>
+            <div class="clients-logo-img">
+              <img src="img/clients/clients-logo3.png" alt="Features">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          {% comment %} <h2>Stop By For A visit</h2> {% endcomment %}
+          <ul class="address-block">
+            <li>
+              <i class="fa fa-map-marker"></i>Los Carrera #325, Dpto 32, Oficina 5, Viña del Mar
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i>Correo: lindasonrisacontacto@gmail.com
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>Teléfono: +56 9 5300 0532
+            </li>
+            <li>
+              <i class="fa fa-clock-o"></i>Lunes a Viernes de 10:00 a 19:00 hrs - Sábado de 10:00 a 13:00
+              hrs
+            </li>
+            <li>
+              <i class="fa fa-cc-visa"></i><i class="fa fa-cc-mastercard"></i><i class="fa fa-cc-amex"></i><i
+                class="fa fa-cc-paypal"></i>Medios de pago : Tarjeta
+              Crédito - Débito - Paypal
+            </li>
+
+          </ul>
+          <ul class="social-icons">
+              <li>
+              <a href="http://www.google.cl"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

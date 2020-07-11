@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% comment %} <title>Linda Sonrisa</title> {% endcomment %}
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  {% load static %}
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'core/css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/responsive.css' %}">
+
+  <!-- Js -->
+  <script src="{% static 'core/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="{% static '
+      core / js / vendor / jquery - 1.10 .2.min.js ' %}"><\/script>')
+  </script>
+  <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'core/js/plugins.js' %}"></script>
+  <script src="{% static 'core/js/min/waypoints.min.js' %}"></script>
+  <script src="{% static 'core/js/jquery.counterup.js' %}"></script>
+
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="{% static 'core/js/google-map-init.js' %}"></script>
+
+  <script src="{% static 'core/js/main.js' %}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+
+<body>
+
+  <!-- Header Start -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- header Nav Start -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'inicio'%}">
+                  <img src="{% static 'core/img/logo.png' %}" alt="Logo">
+                </a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                 <li><a href="{% url 'inicio' %} ">Inicio</a></li>
+                  <li><a href="{% url 'reserva' %}">Agenda Tu Hora</a></li>
+                  <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                  <li><a href="{% url 'quienes_somos'%}">Quiénes Somos</a></li>
+                  {% comment %} <li><a href="{% url 'contacto' %}">Contacto</a></li> {% endcomment %}
+                  {% if perms.core.view_sistema_inventario %}
+                  <li><a href="{% url 'sistema_inventario' %}">Sistema Inventario</a></li>
+                  {% endif%}
+                  {% if user.is_authenticated %}
+                  <li>
+                      <a href="#">Bienvenido: {{ user.username }}</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                  </li>
+                  {% else %}
+                  <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                  <li><a href="{% url 'registrar' %}">Registrar</a></li>
+                  {% endif %}
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header><!-- header close -->
+
+  {% comment %} <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+    <div class="Appointment">
+      <div class="book_btn d-none d-lg-block">
+        <a class="popup-with-form" href="#test-form">Make an Appointment</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="mobile_menu d-block d-lg-none"></div>
+  </div> {% endcomment %}
+
+  {% comment %}
+  <!-- form itself end-->
+  <form id="test-form" class="white-popup-block mfp-hide">
+    <div class="popup_box ">
+      <div class="popup_inner">
+        <h3>Make an Appointment</h3>
+        <form action="#">
+          <div class="row">
+            <div class="col-xl-6">
+              <input id="datepicker" placeholder="Pick date">
+            </div>
+            <div class="col-xl-6">
+              <input id="datepicker2" placeholder="Suitable time">
+            </div>
+            <div class="col-xl-6">
+              <select class="form-select wide" id="default-select" class="">
+                <option data-display="Select Department">Department</option>
+                <option value="1">Eye Care</option>
+                <option value="2">Physical Therapy</option>
+                <option value="3">Dental Care</option>
+              </select>
+            </div>
+            <div class="col-xl-6">
+              <select class="form-select wide" id="default-select" class="">
+                <option data-display="Doctors">Doctors</option>
+                <option value="1">Mirazul Alom</option>
+                <option value="2">Monzul Alom</option>
+                <option value="3">Azizul Isalm</option>
+              </select>
+            </div>
+            <div class="col-xl-6">
+              <input type="text" placeholder="Name">
+            </div>
+            <div class="col-xl-6">
+              <input type="text" placeholder="Phone no.">
+            </div>
+            <div class="col-xl-12">
+              <input type="email" placeholder="Email">
+            </div>
+            <div class="col-xl-12">
+              <button type="submit" class="boxed-btn3">Confirm</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+  <!-- form itself end --> {% endcomment %}
+
+  {% block contenido %}
+
+  {% endblock contenido %}
+
+  <!-- footer Start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-manu">
+            <ul>
+              <li><a href="{% url 'quienes_somos' %}">Sobre Nosotros</a></li>
+              {% comment %} <li><a href="{% url 'contacto' %}">Contacto</a></li> {% endcomment %}
+              {% comment %} <li><a href="#">Cómo Funciona</a></li> {% endcomment %}
+              {% comment %} <li><a href="#">Soporte</a></li> {% endcomment %}
+              <li><a href="{% url 'terminos' %}">Términos</a></li>
+            </ul>
+          </div>
+          <p>Copyright &copy; Portafolio DuocUc2020 by Peoza & Gallardo <a href="https://dcrazed.com/">Dcrazed</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+
+</body>
+
+</html>

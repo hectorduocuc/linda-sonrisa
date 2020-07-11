@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Linda Sonrisa | Paciente</title>
+	<link rel="stylesheet" href="{% static 'core/master/css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'core/master/css/sweetalert2.css' %}">
+	<link rel="stylesheet" href="{% static 'core/master/css/material.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/master/css/material-design-iconic-font.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/master/css/jquery.mCustomScrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'core/master/css/main.css' %}">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+	</script>
+	<script src="{% static 'core/master/js/material.min.js' %}"></script>
+	<script src="{% static 'core/master/js/sweetalert2.min.js' %}"></script>
+	<script src="{% static 'core/master/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+	<script src="{% static 'core/master/js/main.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- Notifications area -->
+	<section class="full-width container-notifications">
+		<div class="full-width container-notifications-bg btn-Notification"></div>
+		<section class="NotificationArea">
+			<div class="full-width text-center NotificationArea-title tittles">Notifications <i
+					class="zmdi zmdi-close btn-Notification"></i></div>
+			<a href="#" class="Notification" id="notifation-unread-1">
+				<div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle"></i>
+						<strong>New User Registration</strong>
+						<br>
+						<small>Just Now</small>
+					</p>
+				</div>
+				<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-1">Notification as UnRead</div>
+			</a>
+			<a href="#" class="Notification" id="notifation-read-1">
+				<div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>New Updates</strong>
+						<br>
+						<small>30 Mins Ago</small>
+					</p>
+				</div>
+				<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-1">Notification as Read</div>
+			</a>
+			<a href="#" class="Notification" id="notifation-unread-2">
+				<div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle"></i>
+						<strong>Archive uploaded</strong>
+						<br>
+						<small>31 Mins Ago</small>
+					</p>
+				</div>
+				<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-2">Notification as UnRead</div>
+			</a>
+			<a href="#" class="Notification" id="notifation-read-2">
+				<div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>New Mail</strong>
+						<br>
+						<small>37 Mins Ago</small>
+					</p>
+				</div>
+				<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-2">Notification as Read</div>
+			</a>
+			<a href="#" class="Notification" id="notifation-read-3">
+				<div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>Folder delete</strong>
+						<br>
+						<small>1 hours Ago</small>
+					</p>
+				</div>
+				<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-3">Notification as Read</div>
+			</a>
+		</section>
+	</section>
+	<!-- navBar -->
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
+			<div class="mdl-tooltip" for="btn-menu">Menu</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="btn-Notification" id="notifications">
+						<i class="zmdi zmdi-notifications"></i>
+						<!-- <i class="zmdi zmdi-notifications-active btn-Notification" id="notifications"></i> -->
+						<div class="mdl-tooltip" for="notifications">Notifications</div>
+					</li>
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+					</li>
+					<li class="text-condensedLight noLink"><small>Nombre Usuario</small></li>
+					<!--<li class="noLink">
+						figure>
+							<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+						</figure>
+					</li>-->
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div class="full-width navLateral-body-logo text-center tittles">
+				<i class="zmdi zmdi-close btn-menu"></i> Guardar Paciente
+			</div>
+			<figure class="full-width" style="height: 77px;">
+				<div class="navLateral-body-cl">
+					<img src="{% static 'core/master/assets/img/avatar-male.png' %}" alt="Avatar"
+						class="img-responsive">
+				</div>
+				<figcaption class="navLateral-body-cr hide-on-tablet">
+					<span>
+						Full Name Admin<br>
+						<small>Admin</small>
+					</span>
+				</figcaption>
+			</figure>
+			<div class="full-width tittles navLateral-body-tittle-menu">
+				<i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; SISTEMA LSG</span>
+			</div>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="{% url 'sistema_inventario' %}" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								HOME
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<!--<a href="%" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-case"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								ADMINISTRACION
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>-->
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<!--<a href="company.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-balance"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										CONSULTA
+									</div>
+								</a>-->
+							</li>
+							<li class="full-width">
+								<!--<a href="providers.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-truck"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										PROVEEDORES
+									</div>
+								</a>-->
+							</li>
+							<li class="full-width">
+								<!--<a href="payments.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-card"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										PAGOS
+									</div>
+								</a>-->
+							</li>
+							<!--<li class="full-width">
+								<a href="categories.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-label"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										CATEGORIAS
+									</div>
+								</a>
+							</li>-->
+						</ul>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<!--<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-face"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								USUARIOS
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="admin.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-account"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										PACIENTES
+									</div>
+								</a>
+							</li>
+							<li class="full-width">
+								<a href="client.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-accounts"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										CLIENTES
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>-->
+					<li class="full-width divider-menu-h"></li>
+					<!--<li class="full-width">
+						<a href="products.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-washing-machine"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								INSUMOS
+							</div>
+						</a>
+					</li>-->
+					<li class="full-width divider-menu-h"></li>
+					<!--<li class="full-width">
+						<a href="sales.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-shopping-cart"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								COMPRAS
+							</div>
+						</a>
+					</li>-->
+					<li class="full-width divider-menu-h"></li>
+					<!--<li class="full-width">
+						<a href="inventory.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-store"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								INVENTARIO
+							</div>
+						</a>
+					</li>-->
+					<li class="full-width divider-menu-h"></li>
+					<!--<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-wrench"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								CONFIGURACION
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="#!" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-widgets"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										OPCIONES
+									</div>
+								</a>
+							</li>
+							<li class="full-width">
+								<a href="#!" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-widgets"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										OPCIONES
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>-->
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<!-- pageContent -->
+	<section class="full-width pageContent">
+		<section class="full-width header-well">
+			<div class="full-width header-well-icon">
+				<i class="zmdi zmdi-account"></i>
+			</div>
+			<div class="full-width header-well-text">
+				<p class="text-condensedLight">
+					MODIFICAR EL PACIENTE
+				</p>
+			</div>
+		</section>
+		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			<!--<div class="mdl-tabs__tab-bar">
+				<a href="#tabNewAdmin" class="mdl-tabs__tab is-active">NUEVO</a>
+				<a href="{% url 'pacientelistar' %}"  class="mdl-tabs__tab">LISTAR</a>
+			</div>-->
+
+
+
+            <div class="mdl-tabs__panel is-active" id="tabNewAdmin">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+						<div class="full-width panel mdl-shadow--2dp">
+							<div class="full-width panel-tittle bg-primary text-center tittles">
+								Editar Paciente
+							</div>
+							<div class="full-width panel-content">
+
+
+                               <!--formulario para registro de paciente-->
+								<form action="" id="FormularioUsuario" method="POST">
+								{%csrf_token %}
+                                
+
+                                
+									<div class="mdl-grid">
+										<div
+											class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">Datos del Paciente</h5>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="hidden"
+													pattern="-?[0-9]*(\.[0-9]+)?" id="txtrut" name="txtrut" value="{{ usuario.rut }}">
+												<label class="mdl-textfield__label" for="DNIAdmin">RUT</label>
+												<span class="mdl-textfield__error">Rut Invalido</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text"
+													pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="txtnombre" name="txtnombre" value="{{ usuario.nombre }}">
+												<label class="mdl-textfield__label" for="NameAdmin">Nombres</label>
+												<span class="mdl-textfield__error">Nombre Invalido</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text"
+													pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="txtapepat" name="txtapepat" value="{{ usuario.apellido_pat }}">
+												<label class="mdl-textfield__label" for="LastNameAdmin">Apellido
+													Paterno</label>
+												<span class="mdl-textfield__error">Apellido paterno Invalido</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text"
+													pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="txtapemat" name="txtapemat" value="{{ usuario.apellido_mat}}">
+												<label class="mdl-textfield__label" for="LastNameAdmin">Apellido
+													Materno</label>
+												<span class="mdl-textfield__error">Apellido Materno Invalido</span>
+											</div>
+											<span class="form-label">Fecha de Nacimiento</span>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="form-control" type="date" required
+													pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="datenaci" name="datenaci" value="{{ usuario.fecha_nacimiento }}">
+												<label class="mdl-textfield__label" for="phoneAdmin"> </label>
+												<span class="mdl-textfield__error">Fecha Invalida</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" id="txtdireccion" name="txtdireccion" value="{{ usuario.direccion }}">
+												<label class="mdl-textfield__label" for="emailAdmin">Direccion</label>
+												<span class="mdl-textfield__error">Direccion Invalida</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" id="txttelefono" name="txttelefono" value="{{ usuario.telefono }}">
+												<label class="mdl-textfield__label" for="addressAdmin">Telefono</label>
+												<span class="mdl-textfield__error">Telefono Invalido</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="email" id="txtmail" name="txtmail" value="{{ usuario.correo }}">
+												<label class="mdl-textfield__label" for="addressAdmin">Correo
+													E-mail</label>
+												<span class="mdl-textfield__error">E-mail invalido</span>
+											</div>
+										</div>
+										<!--<div
+											class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
+											<h5 class="text-condensedLight">Detalles de Cuenta</h5>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text"
+													pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ]*(\.[0-9]+)?" id="UserNameAdmin">
+												<label class="mdl-textfield__label" for="UserNameAdmin">Usuario</label>
+												<span class="mdl-textfield__error">Usurario Invalido</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="password" id="passwordAdmin">
+												<label class="mdl-textfield__label"
+													for="passwordAdmin">Contraseña</label>
+												<span class="mdl-textfield__error">Contraseña Invalida</span>
+											</div>
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="password" id="passwordAdmin">
+												<label class="mdl-textfield__label" for="passwordAdmin">Descripcion
+													Medica</label>
+												<span class="mdl-textfield__error">Descripcion Medica Invalida</span>
+											</div>
+											<h5 class="text-condensedLight">Choose Avatar</h5>
+											<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+												<input type="radio" id="option-1" class="mdl-radio__button"
+													name="options" value="avatar-male.png">
+												<img src="{% static 'core/master/assets/img/avatar-male.png' %}"
+													alt="avatar" style="height: 45px; width=" 45px;" ">
+												<span class=" mdl-radio__label">Avatar 1</span>
+											</label>
+											<br><br>
+											<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+												<input type="radio" id="option-2" class="mdl-radio__button"
+													name="options" value="avatar-female.png">
+												<img src="{% static 'core/master/assets/img/avatar-female.png' %}"
+													alt="avatar" style="height: 45px; width=" 45px;" ">
+												<span class=" mdl-radio__label">Avatar 2</span>
+											</label>
+											<br><br>
+											<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+												<input type="radio" id="option-3" class="mdl-radio__button"
+													name="options" value="avatar-male2.png">
+												<img src="{% static 'core/master/assets/img/avatar-male2.png' %}"
+													alt="avatar" style="height: 45px; width=" 45px;" ">
+												<span class=" mdl-radio__label">Avatar 3</span>
+											</label>
+											<br><br>
+											<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+												<input type="radio" id="option-4" class="mdl-radio__button"
+													name="options" value="avatar-female2.png">
+												<img src="{% static 'core/master/assets/img/avatar-female2.png' %}"
+													alt="avatar" style="height: 45px; width=" 45px;" ">
+												<span class=" mdl-radio__label">Avatar 4</span>
+											</label>
+										</div>-->
+									</div>
+									<p class="text-center">
+										<button
+											class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary"
+											id="btn-agregarUsuario" type="submit" class="btn btn-primary" Submit nombre="btn-EditarPaciente">
+											
+											<i class="zmdi zmdi-plus"></i>
+										</button>
+										<div class="mdl-tooltip" for="btn-addAdmin">Modificar Paciente</div>
+									</p>
+									
+							</form>
+
+
+
+                           <h3>
+						   {{mensaje}}
+						   </h3>
+					     </div>
+
+                    </div>
+                </div>
+			</div>
+
+</body>
+
+</html>

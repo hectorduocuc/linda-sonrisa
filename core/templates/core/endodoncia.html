@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Servicios | Endodoncia</title>
+
+<!-- Slider Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h1>Especialidades</h1>
+          <p>En Linda Sonrisa tenemos las mejores tecnologías para tu sonrisa.</p>
+          <p>Líderes de especialistas dentales de Chile.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Endodoncia</h2>
+          </div>
+          <p>Es la especialidad que se encarga de la salud del diente y de resguardar su vitalidad a
+            través de tratamientos de conducto.
+            <br>
+            Consiste en la eliminación del nervio dentario y los vasos sanguíneos del diente,
+            que generalmente se encuentra necrosado y en donde se realiza un relleno con material especial,
+            que asegure mantener la pieza dentaria en boca funcionando. </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{% static 'core/img/portfolio/work10.jpg' %}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>Solicita Tu Hora</h2>
+          {% comment %} <p>Read more about what we do and our philosophy of design. Judge for yourself The work and
+            results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+          {% endcomment %}
+          <a class="btn btn-default btn-call-to-action" href="{% url 'reserva' %}">Reservar Hora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}

@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<title>Linda Sonrisa | Servicios | Ortodóncia</title>
+
+<!-- Slider Start -->
+<section id="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h1>Especialidades</h1>
+          <p>En Linda Sonrisa tenemos las mejores tecnologías para tu sonrisa.</p>
+          <p>Líderes de especialistas dentales de Chile.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Ortodoncia</h2>
+          </div>
+          <p>El objetivo de la ortodoncia es obtener una linda sonrisa, enderezar tus dientes y lo más importante
+            devolverte una correcta función que asegure la estabilidad del resultado a largo plazo.
+            <br>
+            Los dientes en mala posición tienen una mala apariencia estética, son difíciles de mantener limpios, corren
+            riesgo de sufrir caries y/o enfermedades de las encías.
+            <br>
+            Una mala oclusión o mordida puede ocasionar molestias en la musculatura generando dolores de cabeza y
+            cuello.
+            <br>
+            El tratamiento se realiza mediante aparatos fijos y/o removibles, que provocan los movimientos dentarios.
+            <br>
+            Actualmente la ortodoncia se usa tanto en niños como en adultos, sin límite de edad </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{% static 'core/img/portfolio/work7.jpg' %}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>Solicita Tu Hora</h2>
+          {% comment %} <p>Read more about what we do and our philosophy of design. Judge for yourself The work and
+            results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+          {% endcomment %}
+          <a class="btn btn-default btn-call-to-action" href="{% url 'reserva' %}">Reservar Hora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}
